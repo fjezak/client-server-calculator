@@ -8,6 +8,15 @@ int main(int argc , char *argv[])
     int sock;
     struct sockaddr_in server;
     char dzialanie[1000] , wynik[2000];
+    char *adress=argv[1] ;
+    int port=atoi(argv[2]);
+
+
+printf( "adress = %s\n", adress );
+//printf("adres serwera: %s ",adress);
+printf("port: %d\n",port );
+
+
 
     sock = socket(AF_INET , SOCK_STREAM , 0);
     if (sock == -1)
@@ -16,9 +25,9 @@ int main(int argc , char *argv[])
     }
     puts("Gniazd utworzone");
 
-    server.sin_addr.s_addr = inet_addr("192.168.0.66");
+    server.sin_addr.s_addr = inet_addr(adress);
     server.sin_family = AF_INET;
-    server.sin_port = htons( 8883 );
+    server.sin_port = htons(port);
 
     if (connect(sock , (struct sockaddr *)&server , sizeof(server)) < 0)
     {
