@@ -1,7 +1,11 @@
-#include<stdio.h> 
-#include<string.h>   
-#include<sys/socket.h>   
-#include<arpa/inet.h> 
+//http://rogerdudler.github.io/git-guide/index.pl.html
+
+
+
+#include<stdio.h>
+#include<string.h>
+#include<sys/socket.h>
+#include<arpa/inet.h>
 
 int main(int argc , char *argv[])
 {
@@ -68,4 +72,3 @@ printf("port: %d\n",port );
     close(sock);
     return 0;
 }
-
