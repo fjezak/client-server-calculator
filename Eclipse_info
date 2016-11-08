@@ -1,0 +1,12 @@
+Ustawienia w Eclipse:
+
+W bibliotece
+Properties> C/C++ Build > Settings > GCC C Compiler > Miscellaneous : -fPIC (do zaznaczenia)
+
+W projekcie:
+Properties> C/C++ Build > Settings > GCC C Compiler > Includes : Path
+				   > GCC C Linker > Libraries : (Libraries i Path)
+
+Run/Debug Settings: LD_LIBRARY_PATH   /home/domin/workspace/PjCW2/serwer/lib
+
+http://rogerdudler.github.io/git-guide/index.pl.html
